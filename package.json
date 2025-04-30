@@ -1,0 +1,39 @@
+{
+  "name": "rabbitmq",
+  "version": "1.0.0",
+  "description": "Système de calcul distribué avec RabbitMQ",
+  "main": "src/client-sender.js",
+  "scripts": {
+    "start:sender": "node src/client-sender.js",
+    "start:sender:basic": "node src/client-sender.js basic",
+    "start:sender:ops": "node src/client-sender.js ops",
+    "start:sender:all": "node src/client-sender.js all",
+    "start:receiver": "node src/client-receiver.js",
+    "start:worker": "node src/worker.js",
+    "start:worker:add": "node src/worker.js add",
+    "start:worker:sub": "node src/worker.js sub",
+    "start:worker:mul": "node src/worker.js mul",
+    "start:worker:div": "node src/worker.js div",
+    "start:user": "node src/user-client.js",
+    "start:all:basic": "concurrently \"npm run start:sender:basic\" \"npm run start:receiver\" \"npm run start:worker\"",
+    "start:all:ops": "concurrently \"npm run start:sender:ops\" \"npm run start:receiver\" \"npm run start:worker:add\" \"npm run start:worker:sub\" \"npm run start:worker:mul\" \"npm run start:worker:div\"",
+    "start:all:all": "concurrently \"npm run start:sender:all\" \"npm run start:receiver\" \"npm run start:worker:add\" \"npm run start:worker:sub\" \"npm run start:worker:mul\" \"npm run start:worker:div\"",
+    "start:all:specialized": "concurrently \"npm run start:receiver\" \"npm run start:worker:add\" \"npm run start:worker:sub\" \"npm run start:worker:mul\" \"npm run start:worker:div\"",
+    "calc": "node src/user-client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rabbitmq",
+    "distributed",
+    "calculation",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
