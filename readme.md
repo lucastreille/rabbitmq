@@ -1,9 +1,9 @@
 # Projet RabbitMQ - Système de calcul distribué
 
 **Projet réalisé par**
-Lucas TREILLE
-Asaad Mehidi
-Gabriel Changrenier
+- Lucas TREILLE
+- Asaad Mehidi
+- Gabriel Changrenier
 
 Ce projet implémente un système de calcul distribué en utilisant RabbitMQ comme middleware de messagerie. Il permet d'effectuer des opérations mathématiques de manière asynchrone et distribuée à travers différents composants communicant via des exchanges et des files d'attente.
 
