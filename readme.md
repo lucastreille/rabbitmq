@@ -1,7 +1,7 @@
 # Projet RabbitMQ - Système de calcul distribué
 
 **Projet réalisé par**
-Lucas TREILLE 
+Lucas TREILLE
 Asaad Mehidi
 Gabriel Changrenier
 
